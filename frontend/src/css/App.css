@@ -1,0 +1,89 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+
+/* CARD STYLING */
+.card {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 350px;
+  height: 450px;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* HOVER OVERLAY */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay p {
+    font-size: medium;
+    margin-bottom: 1rem;
+    padding: 30px;
+    text-align: justify;
+}
+
+.card-overlay button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background-color: #000000;
+  border: 1px dotted cadetblue;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card-overlay button:hover {
+  background-color: cadetblue;
+  color: black;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1150px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    min-width: 90%;
+    height: auto;
+    min-height: 350px;
+  }
+}
