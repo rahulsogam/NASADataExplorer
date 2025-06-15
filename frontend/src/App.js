@@ -1,9 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import Earth from './resources/earth.gif';
 import APOD from './resources/APOD.gif';
 import Mars from './resources/Mars.gif';
+
 import './css/App.css';
 
 function App() {
+  const navigate = useNavigate();
+
+
   return (
    //Main Div
   <div
@@ -47,10 +52,10 @@ function App() {
           backgroundImage: `url(${bg})`,
         }}
       >
-        <p style={{ fontSize: "1.5rem", fontWeight: "bold" }}>{label}</p>
+        <p style={{ fontSize: "1.5rem", fontWeight: "bold",fontStyle:"italic" }}>{label}</p>
          <div className="card-overlay">
           <p>{info} </p>
-          <button onClick={() => alert(`Clicked on ${label}`)}>Click Here</button>
+          <button onClick={() => navigate('/data', { state: { label } })}>Explore {label}</button>
         </div>
       </div>
     ))}
