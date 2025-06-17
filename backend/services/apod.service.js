@@ -4,8 +4,8 @@ require('dotenv').config();
 exports.getAPOD = async (date,start_date,end_date, count) => {
   const params = {
     date,
-    start_date,
-    end_date,
+    // start_date,
+    // end_date,
     api_key: process.env.NASA_API_KEY 
   };
 
@@ -14,7 +14,7 @@ exports.getAPOD = async (date,start_date,end_date, count) => {
   try {
     const response = await axios.get('https://api.nasa.gov/planetary/apod', { 
       params,
-      timeout: 5000 // 5 second timeout
+      // timeout: 5000 // 5 second timeout
     });
     return response.data;
   } catch (error) {

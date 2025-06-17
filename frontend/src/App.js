@@ -46,8 +46,7 @@ function App() {
         info:"NASA's APOD (Astronomy Picture of the Day) API shares daily images of space along with expert explanations. It showcases the universe’s beauty while promoting astronomy education and awareness. click on the button to know more in detail.",
       },
     ].map(({ label, bg,info }) => (
-      <div
-        key={label} className='card'
+      <div key={label} className='card'
         style={{
           backgroundImage: `url(${bg})`,
         }}

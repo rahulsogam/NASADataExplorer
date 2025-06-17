@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const earthRoutes = require('./routes/earth/earth.routes');
 const apodRoutes = require('./routes/apod/apod.routes');
-// const marsRoutes = require('./routes/mars');
+const marsRoutes = require('./routes/mars/mars.routes');
 const errorHandler = require('./middlewares/error.middleware');
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.json());
 // Routes
 app.use('/api/earth', earthRoutes);
 app.use('/api/apod', apodRoutes);
-// app.use('/api/mars', marsRoutes);
+app.use('/api/mars', marsRoutes);
 
 // Error handling
 app.use(errorHandler);

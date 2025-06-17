@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 const NASA_API_KEY= process.env.NASA_API_KEY;
 
 exports.getEarthImagery = async (lon, lat, date, dim) => {
@@ -7,7 +8,7 @@ exports.getEarthImagery = async (lon, lat, date, dim) => {
     lat,
     date,
     dim,
-    api_key: process.env.NASA_API_KEY 
+    api_key: NASA_API_KEY 
   };
     console.log('Request params:', { ...params, api_key: '***REDACTED***' });
   try {

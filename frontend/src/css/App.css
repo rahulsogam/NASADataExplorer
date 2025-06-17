@@ -5,8 +5,13 @@
   gap: 1.5rem;
   padding: 2rem;
 }
-
-
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #111118; /* or your desired color */
+  color: white;
+  padding: 0px 5px 0px 5px;
+}
 /* CARD STYLING */
 .card {
   position: relative;
