@@ -1,0 +1,169 @@
+/* APOD.css */
+.apod-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.apod-card {
+  max-width: 800px;
+  width: 100%;
+  background: #110b11;
+  border: 1px solid cadetblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.media-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.apod-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-bottom: 1px solid #eee;
+}
+
+.apod-info {
+   padding: 20px;
+   color: #fffbfb;
+   
+}
+
+.apod-info h2 {
+  margin-top: 0;
+  color: #fffbfb;
+}
+
+.explanation {
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.date {
+  font-style: italic;
+  color: #fff8f8;
+  margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .apod-card {
+    max-width: 95%;
+  }
+  
+  .apod-info {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apod-info {
+    padding: 10px;
+  }
+  
+  .apod-info h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background: rgba(12, 2, 35, 0.379);
+  transform: scale(1.1);
+}
+
+.home-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* For dark backgrounds */
+.dark .home-icon {
+  color: #333;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .home-icon {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* ✅ Horizontal center */
+  justify-content: center;     /* ✅ Vertical center if parent allows */
+  gap: 0.5rem;
+  margin: 2rem auto;
+  color: white;
+  max-width: 100%;
+  text-align: center;
+}
+
+.date-picker-container label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.date-picker-container input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #fffbfb;
+  color: rgb(0, 0, 0);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.date-picker-container input[type="date"]:focus {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+@media (min-width: 600px) {
+  .date-picker-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .date-picker-container label {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+}
+
+/* error */
+
+.error {
+  /* background-color: #ffdddd; */
+  color: #ffdddd;
+  padding: 1rem;
+  /* border: 1px solid #a80000; */
+  margin: 1rem auto;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}

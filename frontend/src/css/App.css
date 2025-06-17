@@ -8,9 +8,11 @@
 html, body, #root {
   height: 100%;
   margin: 0;
-  background-color: #111118; /* or your desired color */
+  background-color: #111118;  
+  /* background: url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ODVreWNtMWJmazZjMHUzbzB4eWR6dzVlbWJlODl1ZGF1N3R6djhzMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3og0IV7MOCfnm85iRa/giphy.gif'); */
+  background-size: cover;
   color: white;
-  padding: 0px 5px 0px 5px;
+  /* padding: 0px 5px 0px 5px; */
 }
 /* CARD STYLING */
 .card {

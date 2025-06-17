@@ -1,0 +1,130 @@
+/* //earth */
+
+/* Earth Controls Styling */
+.earth-controls-container {
+  /* margin: 20px 0; */
+  max-width: 800px;
+  justify-content: center;
+}
+
+.earth-instruction {
+  color: #cad2d3;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.earth-input-group {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.earth-coordinate-input {
+  flex: 1;
+}
+
+.earth-input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cad2d3;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.earth-input-wrapper {
+  position: relative;
+}
+
+.earth-input-field {
+  width:100px;
+  padding: 12px 15px;
+  background: rgba(10, 30, 40, 0.7);
+  border: 1px solid #3a7078;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.earth-input-field:hover {
+  border-color: #5f9ea0;
+  background: rgba(10, 30, 40, 0.9);
+}
+
+.earth-input-field:focus {
+  outline: none;
+  border-color: #7fb5b7;
+  box-shadow: 0 0 0 2px rgba(95, 158, 160, 0.3);
+}
+
+.earth-input-field::placeholder {
+  color: #5f9ea0;
+  opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .earth-input-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+ .earth-submit-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .earth-input-field {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .earth-instruction {
+    font-size: 0.9rem;
+  }
+  
+  .earth-input-label {
+    font-size: 0.85rem;
+  }
+  
+  .earth-input-field {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Earth Submit Button */
+.earth-submit-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #3a7078;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.earth-submit-button:hover {
+  background: #5f9ea0;
+  transform: translateY(-2px);
+}
+
+.earth-submit-button:active {
+  transform: translateY(0);
+}
+
+.earth-submit-button:disabled {
+  background: #3a7078;
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}

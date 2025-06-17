@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import '../css/Earth.css';
 const EarthViewer = ({ image }) => {
   const [imageUrl, setImageUrl] = useState('');
 
@@ -10,8 +10,12 @@ const EarthViewer = ({ image }) => {
   }, [image]);
 
   return (
-    <div className="earth-viewer">
-      <img style={{height:"300px",width:"300px"}} src={imageUrl} alt="Earth from space" />
+    <div className='apod-container'>
+      <div className='apod-card'>
+        <div className='media-container'>
+          <img className="apod-media" src={imageUrl} alt="Earth from space" />
+        </div>
+      </div>
     </div>
   );
 };
