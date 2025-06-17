@@ -8,8 +8,14 @@ const errorHandler = require('./middlewares/error.middleware');
 const app = express();
 
 // Middlewares
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
+
+app.use(cors({
+  origin: 'https://your-frontend.vercel.app', // or '*', for testing only
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 // Routes
 
