@@ -12,6 +12,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+
+app.get("/",(req,res)=>{
+    res.json("Welcome to NASA Explorer");
+})
 app.use('/api/earth', earthRoutes);
 app.use('/api/apod', apodRoutes);
 app.use('/api/mars', marsRoutes);
