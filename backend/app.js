@@ -12,12 +12,11 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: '*', // Allow all origins temporarily for testing
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: 'https://nasa-data-explorer-nu.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
-app.options('*', cors())
+
 // Routes
 
 app.get("/",(req,res)=>{
