@@ -13,7 +13,7 @@ app.use(express.json());
 var corsOptions = {
   methods: "GET, PUT, POST, DELETE, PATCH",
   credentials: true,
-  origin: "https://nasa-data-explorer-nu.vercel.app",
+  origin: "http://localhost:3000",
 };
 
 var allowCrossDomain = function (req, res, next) {
