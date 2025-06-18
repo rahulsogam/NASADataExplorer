@@ -10,13 +10,18 @@ const app = express();
 // Middlewares
 //app.use(cors());
 app.use(express.json());
-
 app.use(cors({
-  origin: 'https://nasa-data-explorer-nu.vercel.app', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  origin: '*', // Allow all origins temporarily for testing
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
+// app.use(cors({
+//   origin: 'https://nasa-data-explorer-nu.vercel.app', 
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true
+// }));
+app.options('*', cors());
 // Routes
 
 app.get("/",(req,res)=>{
