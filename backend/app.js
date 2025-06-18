@@ -9,21 +9,12 @@ const app = express();
 
 
 app.use(express.json());
-const allowedOrigins = [
-  'https://nasa-data-explorer-nu.vercel.app', 
-  'http://localhost:3000'                     // for Local deployment
-];
-
 
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: [
+    'https://nasa-data-explorer-nu.vercel.app',
+    'http://localhost:3000'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
