@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://your-frontend.vercel.app', // or '*', for testing only
+  origin: 'https://nasa-data-explorer-nu.vercel.app/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
