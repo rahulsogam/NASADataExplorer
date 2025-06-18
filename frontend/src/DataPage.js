@@ -121,7 +121,9 @@ const handleEarthSubmit = () => {
       {loading ?
       (
         <div  className='loader'>
-          <RingLoader className="loader" size={250} color="cadetblue"   />
+          <div>
+            <RingLoader className="loader" size={250} color="cadetblue"   />
+          </div>
         </div>
       ):
       (
