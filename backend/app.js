@@ -10,19 +10,33 @@ const app = express();
 // Middlewares
 //app.use(cors());
 app.use(express.json());
-app.use(cors({
-  origin: '*', // Allow all origins temporarily for testing
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+var corsOptions = {
+  methods: "GET, PUT, POST, DELETE, PATCH",
   credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-// app.use(cors({
-//   origin: 'https://nasa-data-explorer-nu.vercel.app', 
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   credentials: true
-// }));
-app.options('*', cors());
-// Routes
+  origin: "https://nasa-data-explorer-nu.vercel.app",
+};
+
+var allowCrossDomain = function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  );
+  res.header("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Max-Age", "1800");
+  res.setHeader("Access-Control-Allow-Headers", "content-type");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  );
+
+  next();
+};
+app.use(allowCrossDomain);
+app.options("*", cors());
+app.use(cors(corsOptions));
 
 app.get("/",(req,res)=>{
     res.json("Welcome to NASA Explorer");
