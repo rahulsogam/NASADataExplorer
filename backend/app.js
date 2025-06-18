@@ -7,18 +7,28 @@ const errorHandler = require('./middlewares/error.middleware');
 
 const app = express();
 
-// Middlewares
-//app.use(cors());
+
 app.use(express.json());
+const allowedOrigins = [
+  'https://nasa-data-explorer-nu.vercel.app', 
+  'http://localhost:3000'                     // for Local deployment
+];
+
 
 app.use(cors({
-  origin: 'https://nasa-data-explorer-nu.vercel.app', 
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
 // Routes
-
 app.get("/",(req,res)=>{
     res.json("Welcome to NASA Explorer");
 })
