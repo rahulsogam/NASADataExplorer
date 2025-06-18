@@ -6,13 +6,16 @@ exports.getEarthImage = async (req, res, next) => {
     const image = await getEarthImagery(lon, lat, date, dim);
     
     // Set proper content-type for image response
+    res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+    res.setHeader('Vary', 'Origin');
     res.writeHead(200, {
       'Content-Type': 'image/png',
       'Content-Length': image.length,
       'Content-Disposition': 'inline'
     });
+    
     res.end(image, 'binary')
-    // res.send(image);
+    
   } catch (error) {
     next(error);
   }
