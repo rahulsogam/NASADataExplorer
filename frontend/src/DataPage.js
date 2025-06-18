@@ -7,7 +7,7 @@ import APODViewer from './components/APODViewer';
 import { RingLoader} from "react-spinners";
 import { FaHome } from 'react-icons/fa';
 // import DatePicker from '../components/';
-import "./css/APOD.css";
+import "./css/Main.css";
 
 const DataPage = () => {
   const { state } = useLocation();
@@ -17,12 +17,12 @@ const DataPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
- const [earthParams, setEarthParams] = useState({
-    lon: -95.33,  
-    lat: 29.78,
-    date: "2014-02-01", 
-    dim: 0.15    
-  });
+  const [earthParams, setEarthParams] = useState({
+      lon: -95.33,  
+      lat: 29.78,
+      date: "2014-02-01", 
+      dim: 0.15    
+    });
 
 const [earthInput, setEarthInput] = useState({
   lon: -95.33,
@@ -71,20 +71,14 @@ const [earthInput, setEarthInput] = useState({
     }
   };
 
-  // const handleEarthParamChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setEarthParams(prev => ({
-  //     ...prev,
-  //     [name]: Number(value)  // Convert to number for lon/lat/dim
-  //   }));
-  // };
+ 
   const handleEarthInputChange = (e) => {
   const { name, value } = e.target;
-  setEarthInput(prev => ({
-    ...prev,
-    [name]: Number(value)
-  }));
-};
+    setEarthInput(prev => ({
+      ...prev,
+      [name]: Number(value)
+    }));
+  };
 
 const handleEarthSubmit = () => {
   setEarthParams(prev => ({
@@ -126,16 +120,7 @@ const handleEarthSubmit = () => {
 
       {loading ?
       (
-        <div  style={{position: "fixed",          // Overlay full screen
-                      top: 0,
-                      left: 0,
-                      width: "100vw",
-                      height: "100vh",
-                      backgroundColor: "black",
-                      display: "flex",
-                      justifyContent: "center",   // Horizontal center
-                      alignItems: "center",       // Vertical center
-                      zIndex: 9999  }}>
+        <div  className='loader'>
           <RingLoader className="loader" size={250} color="cadetblue"   />
         </div>
       ):

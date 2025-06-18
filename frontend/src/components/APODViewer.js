@@ -1,4 +1,4 @@
-import '../css/APOD.css';
+import '../css/Main.css';
 
 const APODViewer = ({ data }) => (
   <div className='apod-container'>
