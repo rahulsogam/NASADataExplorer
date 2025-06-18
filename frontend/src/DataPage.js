@@ -122,7 +122,7 @@ const handleEarthSubmit = () => {
       (
         <div  className='loader'>
           <div>
-            <RingLoader className="loader" size={250} color="cadetblue"   />
+            <RingLoader className="loader" size={150} color="cadetblue"   />
           </div>
         </div>
       ):
