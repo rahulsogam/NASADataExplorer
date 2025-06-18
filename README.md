@@ -53,7 +53,10 @@ DEMO- [https://nasa-data-explorer-nu.vercel.app/]
     
     **Clone the repository**
     Open your terminal and clone the repository:
+    git clone [https://github.com/rahulsogam/NASADataExplorer.git]
+    cd NASADataExplorer
 
+    **Setup Backend & Frontend,Open new terminal inn main folder paste the commands below**
     # For frontend
         cd frontend
         npm install
@@ -62,9 +65,7 @@ DEMO- [https://nasa-data-explorer-nu.vercel.app/]
         cd ../backend
         npm install
     
-    Setup Backend Open new terminal inn main folder paste the commands below
 
-
-### Setup environment variable Setup your nasa api key from [https://api.nasa.gov/] in .env variable
+### Setup environment variable Setup your nasa api key from [https://api.nasa.gov/] in /backend/.env NASA_API_KEY variable
 
 Open the app The app should now be running at: http://localhost:3000
