@@ -6,7 +6,8 @@ DEMO- [https://nasa-data-explorer-nu.vercel.app/]
 
 ✨ Features & Functionalities.
 # Astronomy Pictures of the Day (APOD)
-    Discover awe-inspiring astronomy images curated daily by NASA. Dive deep into the cosmos with each picture’s detailed description.
+    Discover awe-inspiring astronomy images curated daily by NASA. 
+    Dive deep into the cosmos with each picture’s detailed description.
     Date functionality allows you to explore more images from any chice of your dates.
 
 # Mars Rover Photos
