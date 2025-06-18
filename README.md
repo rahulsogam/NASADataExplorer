@@ -11,8 +11,10 @@ DEMO- [https://nasa-data-explorer-nu.vercel.app/]
     Date functionality allows you to explore more images from any chice of your dates.
 
 # Mars Rover Photos
-    Explore photos captured by NASA's Mars rover Curiosity. Select from images taken on different Mars "sols".
-    These images give closer view of the mars and its rover, you can also view details  just by hovering the image.
+    Explore photos captured by NASA's Mars rover Curiosity. 
+    Select from images taken on different Mars "sols".
+    These images give closer view of the mars and its rover, you can also view details 
+    just by hovering the image.
 
 # Earth Imagery
     Explore satellite images of Earth captured by NASA’s Landsat 8.
