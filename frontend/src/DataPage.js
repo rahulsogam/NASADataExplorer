@@ -112,7 +112,7 @@ const handleEarthSubmit = () => {
   }, [label, earthParams]);
 
   return (
-    <div className="data-layout">
+    <div >
      <button onClick={() => navigate('/')} className="back-button">
       <label style={{color:"white",padding:"5px",fontSize:"20px",cursor:"pointer"}}> Explore </label>
       <FaHome className="home-icon" />
@@ -122,7 +122,7 @@ const handleEarthSubmit = () => {
       (
         <div  className='loader'>
           <div>
-            <RingLoader className="loader" size={150} color="cadetblue"   />
+            <RingLoader className="loader" size={200} color="cadetblue"   />
           </div>
         </div>
       ):
